@@ -1,48 +1,94 @@
-import { db } from '@/db'
-import { posts, tags } from '@/db/schema'
-import { eq } from 'drizzle-orm'
-import { notFound } from 'next/navigation'
-import PostCard from '@/components/post-card'
-import type { Metadata } from 'next'
+import { db } from "@/db";
+import { posts, tags } from "@/db/schema";
+import { eq } from "drizzle-orm";
+import { notFound } from "next/navigation";
+import PostCard from "@/components/post-card";
+import type { Metadata } from "next";
 
 interface Props {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params
-  const tag = await db.query.tags.findFirst({ where: eq(tags.slug, slug) })
-  return { title: tag ? `#${tag.name}` : '标签' }
+  const { slug } = await params;
+  const tag = await db.query.tags.findFirst({ where: eq(tags.slug, slug) });
+  return { title: tag ? `#${tag.name}` : "Tag" };
 }
 
-export const revalidate = 60
+export const revalidate = 60;
 
 export default async function TagPage({ params }: Props) {
-  const { slug } = await params
-  const tag = await db.query.tags.findFirst({ where: eq(tags.slug, slug) })
-  if (!tag) notFound()
+  const { slug } = await params;
+  const tag = await db.query.tags.findFirst({ where: eq(tags.slug, slug) });
+  if (!tag) notFound();
 
-  const taggedPosts = await db.query.posts.findMany({
-    where: eq(posts.status, 'published'),
+  const allPosts = await db.query.posts.findMany({
+    where: eq(posts.status, "published"),
     with: { postTags: { with: { tag: true } } },
-  })
+  });
 
-  const filtered = taggedPosts.filter((p) =>
-    p.postTags.some((pt) => pt.tag.slug === slug)
-  )
+  const filtered = allPosts.filter((p) =>
+    p.postTags.some((pt) => pt.tag.slug === slug),
+  );
 
   return (
     <div>
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">#{tag.name}</h1>
+      <div className="mb-12">
+        <p
+          style={{
+            fontFamily: "var(--font-barlow)",
+            fontWeight: 200,
+            fontSize: "0.65rem",
+            letterSpacing: "0.5em",
+            color: "#7a5545",
+            textTransform: "uppercase",
+            marginBottom: "0.6rem",
+          }}
+        >
+          ── Signal Filter
+        </p>
+        <h2
+          style={{
+            fontFamily: "var(--font-cinzel)",
+            fontWeight: 700,
+            fontSize: "1.05rem",
+            letterSpacing: "0.35em",
+            color: "#e85d3a",
+            textTransform: "uppercase",
+          }}
+        >
+          # {tag.name}
+        </h2>
+        <div
+          className="mt-4 h-px"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(232,93,58,0.5), rgba(139,58,42,0.3), transparent)",
+          }}
+        />
+      </div>
+
       {filtered.length === 0 ? (
-        <p className="text-gray-500">该标签下暂无文章。</p>
+        <p
+          className="text-center py-20"
+          style={{
+            fontFamily: "var(--font-barlow)",
+            fontWeight: 200,
+            fontSize: "0.8rem",
+            letterSpacing: "0.35em",
+            color: "#4a3025",
+            textTransform: "uppercase",
+          }}
+        >
+          ── No transmissions found ──
+        </p>
       ) : (
-        <div className="space-y-8">
+        <div className="space-y-6">
           {filtered.map((post) => (
             <PostCard key={post.id} post={post} />
           ))}
         </div>
       )}
     </div>
-  )
+  );
 }
