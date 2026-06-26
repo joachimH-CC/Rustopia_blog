@@ -102,7 +102,7 @@ export default function PostCard({ post }: PostCardProps) {
                 fontWeight: 200,
                 fontSize: "0.62rem",
                 letterSpacing: "0.4em",
-                color: "#7a5545",
+                color: "#b08060",
                 textTransform: "uppercase",
               }}
             >
@@ -117,7 +117,7 @@ export default function PostCard({ post }: PostCardProps) {
               fontWeight: 700,
               fontSize: "1.05rem",
               letterSpacing: "0.12em",
-              color: "#d4b5a0",
+              color: "#f0d4bc",
               textTransform: "uppercase",
               lineHeight: 1.35,
               marginBottom: "1rem",

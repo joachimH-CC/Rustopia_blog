@@ -40,7 +40,7 @@ export default async function TagPage({ params }: Props) {
             fontWeight: 200,
             fontSize: "0.65rem",
             letterSpacing: "0.5em",
-            color: "#7a5545",
+            color: "#b08060",
             textTransform: "uppercase",
             marginBottom: "0.6rem",
           }}
@@ -76,7 +76,7 @@ export default async function TagPage({ params }: Props) {
             fontWeight: 200,
             fontSize: "0.8rem",
             letterSpacing: "0.35em",
-            color: "#4a3025",
+            color: "#7a5040",
             textTransform: "uppercase",
           }}
         >

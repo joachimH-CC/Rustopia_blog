@@ -81,7 +81,7 @@ export default async function PublicLayout({
                   fontWeight: 200,
                   fontSize: "0.65rem",
                   letterSpacing: "0.55em",
-                  color: "#7a5545",
+                  color: "#b08060",
                   textTransform: "uppercase",
                   marginBottom: "0.35rem",
                 }}
@@ -94,7 +94,7 @@ export default async function PublicLayout({
                   fontWeight: 900,
                   fontSize: "1.75rem",
                   letterSpacing: "0.45em",
-                  color: "#d4b5a0",
+                  color: "#f0d4bc",
                   textTransform: "uppercase",
                   lineHeight: 1,
                   transition: "color 0.4s",
@@ -113,7 +113,7 @@ export default async function PublicLayout({
                     fontWeight: 200,
                     fontSize: "0.65rem",
                     letterSpacing: "0.35em",
-                    color: "#7a5545",
+                    color: "#b08060",
                     textTransform: "uppercase",
                     textDecoration: "none",
                     transition: "color 0.25s",
@@ -166,7 +166,7 @@ export default async function PublicLayout({
             fontWeight: 200,
             fontSize: "0.65rem",
             letterSpacing: "0.45em",
-            color: "#4a3025",
+            color: "#7a5040",
             textTransform: "uppercase",
           }}
         >

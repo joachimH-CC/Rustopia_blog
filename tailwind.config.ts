@@ -21,9 +21,9 @@ const config: Config = {
           glow: "#ff7a50",
         },
         parchment: {
-          DEFAULT: "#d4b5a0",
-          muted: "#7a5545",
-          dim: "#4a3025",
+          DEFAULT: "#f0d4bc",
+          muted: "#b08060",
+          dim: "#7a5040",
         },
       },
       fontFamily: {

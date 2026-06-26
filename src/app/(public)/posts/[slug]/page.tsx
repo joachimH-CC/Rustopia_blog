@@ -43,7 +43,7 @@ export default async function PostPage({ params }: Props) {
           fontWeight: 200,
           fontSize: "0.65rem",
           letterSpacing: "0.4em",
-          color: "#7a5545",
+          color: "#b08060",
           textTransform: "uppercase",
           marginBottom: "2.5rem",
           textDecoration: "none",
@@ -102,7 +102,7 @@ export default async function PostPage({ params }: Props) {
             fontWeight: 900,
             fontSize: "clamp(1.4rem, 4vw, 2.1rem)",
             letterSpacing: "0.08em",
-            color: "#d4b5a0",
+            color: "#f0d4bc",
             lineHeight: 1.25,
             textTransform: "uppercase",
             marginBottom: "1.2rem",
@@ -119,7 +119,7 @@ export default async function PostPage({ params }: Props) {
                 fontWeight: 200,
                 fontSize: "0.68rem",
                 letterSpacing: "0.35em",
-                color: "#7a5545",
+                color: "#b08060",
                 textTransform: "uppercase",
               }}
             >
@@ -160,7 +160,7 @@ export default async function PostPage({ params }: Props) {
             fontWeight: 700,
             fontSize: "0.75rem",
             letterSpacing: "0.45em",
-            color: "#7a5545",
+            color: "#b08060",
             textTransform: "uppercase",
           }}
         >

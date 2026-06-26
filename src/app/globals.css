@@ -9,8 +9,8 @@
     --color-bg-surface: #4a1212;
     --color-border: #8b3a2a;
     --color-accent: #e85d3a;
-    --color-text: #d4b5a0;
-    --color-muted: #7a5545;
+    --color-text: #f0d4bc;
+    --color-muted: #b08060;
 }
 
 *,
@@ -21,7 +21,7 @@
 
 html {
     background-color: #2c0a0a;
-    color: #d4b5a0;
+    color: #f0d4bc;
     min-height: 100%;
 }
 
@@ -29,7 +29,7 @@ body {
     font-family: var(--font-barlow), "Helvetica Neue", system-ui, sans-serif;
     font-weight: 300;
     background-color: #2c0a0a;
-    color: #d4b5a0;
+    color: #f0d4bc;
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
@@ -83,7 +83,7 @@ body::after {
 
 /* ── Wasteland Prose (Markdown) ────────── */
 .wasteland-prose {
-    color: #d4b5a0;
+    color: #f0d4bc;
     font-family: var(--font-barlow), system-ui, sans-serif;
     font-weight: 300;
     line-height: 1.9;
@@ -135,12 +135,12 @@ body::after {
 }
 
 .wasteland-prose strong {
-    color: #e8c4a0;
+    color: #f5dfc0;
     font-weight: 600;
 }
 
 .wasteland-prose em {
-    color: #c8a090;
+    color: #e8c0a8;
     font-style: italic;
 }
 
@@ -148,7 +148,7 @@ body::after {
     border-left: 2px solid #8b3a2a;
     padding-left: 1.2em;
     margin-left: 0;
-    color: #7a5545;
+    color: #b08060;
     font-style: italic;
 }
 
@@ -175,7 +175,7 @@ body::after {
     background: none;
     border: none;
     padding: 0;
-    color: #c8a090;
+    color: #e8c0a8;
     font-size: 0.9em;
 }
 
@@ -226,7 +226,7 @@ body::after {
 .wasteland-prose td {
     border: 1px solid rgba(139, 58, 42, 0.3);
     padding: 0.6em 1em;
-    color: #c4a590;
+    color: #e8c0a8;
 }
 
 .wasteland-prose img {
@@ -237,23 +237,23 @@ body::after {
 /* ── Highlight.js overrides ────────────── */
 .hljs {
     background: transparent !important;
-    color: #c8a090 !important;
+    color: #e8c0a8 !important;
 }
 
 .hljs-keyword {
     color: #e85d3a !important;
 }
 .hljs-string {
-    color: #c8a890 !important;
+    color: #e8c8a8 !important;
 }
 .hljs-comment {
-    color: #7a5545 !important;
+    color: #9a7060 !important;
 }
 .hljs-number {
     color: #ff7a50 !important;
 }
 .hljs-function {
-    color: #d4b5a0 !important;
+    color: #f0d4bc !important;
 }
 .hljs-built_in {
     color: #a84c35 !important;
