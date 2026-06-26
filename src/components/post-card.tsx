@@ -25,7 +25,7 @@ export default function PostCard({ post }: PostCardProps) {
     <article
       className="group relative overflow-hidden transition-all duration-300"
       style={{
-        backgroundColor: "rgba(61,16,16,0.5)",
+        backgroundColor: "rgba(44,10,10,0.75)",
         border: "1px solid rgba(139,58,42,0.55)",
       }}
     >
@@ -102,7 +102,7 @@ export default function PostCard({ post }: PostCardProps) {
                 fontWeight: 200,
                 fontSize: "0.62rem",
                 letterSpacing: "0.4em",
-                color: "#b08060",
+                color: "#c89878",
                 textTransform: "uppercase",
               }}
             >
@@ -117,7 +117,7 @@ export default function PostCard({ post }: PostCardProps) {
               fontWeight: 700,
               fontSize: "1.05rem",
               letterSpacing: "0.12em",
-              color: "#f0d4bc",
+              color: "#f5e2d2",
               textTransform: "uppercase",
               lineHeight: 1.35,
               marginBottom: "1rem",

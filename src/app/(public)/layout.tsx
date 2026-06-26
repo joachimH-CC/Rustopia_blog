@@ -2,6 +2,7 @@ import Link from "next/link";
 import { auth } from "@/lib/auth";
 import Particles from "@/components/particles";
 import GlowOrb from "@/components/glow-orb";
+import BackgroundTexture from "@/components/background-texture";
 
 export default async function PublicLayout({
   children,
@@ -15,13 +16,16 @@ export default async function PublicLayout({
       className="min-h-screen relative"
       style={{ backgroundColor: "#2c0a0a" }}
     >
+      {/* Background texture layer — rich geometric decorations behind content */}
+      <BackgroundTexture />
+
       {/* Geometric grid */}
       <div
         className="fixed inset-0 pointer-events-none"
         style={{
           zIndex: 0,
           backgroundImage:
-            "linear-gradient(rgba(232,93,58,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(232,93,58,0.04) 1px, transparent 1px)",
+            "linear-gradient(rgba(232,93,58,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(232,93,58,0.03) 1px, transparent 1px)",
           backgroundSize: "64px 64px",
         }}
         aria-hidden="true"
@@ -81,7 +85,7 @@ export default async function PublicLayout({
                   fontWeight: 200,
                   fontSize: "0.65rem",
                   letterSpacing: "0.55em",
-                  color: "#b08060",
+                  color: "#c89878",
                   textTransform: "uppercase",
                   marginBottom: "0.35rem",
                 }}
@@ -94,7 +98,7 @@ export default async function PublicLayout({
                   fontWeight: 900,
                   fontSize: "1.75rem",
                   letterSpacing: "0.45em",
-                  color: "#f0d4bc",
+                  color: "#f5e2d2",
                   textTransform: "uppercase",
                   lineHeight: 1,
                   transition: "color 0.4s",
@@ -113,7 +117,7 @@ export default async function PublicLayout({
                     fontWeight: 200,
                     fontSize: "0.65rem",
                     letterSpacing: "0.35em",
-                    color: "#b08060",
+                    color: "#c89878",
                     textTransform: "uppercase",
                     textDecoration: "none",
                     transition: "color 0.25s",
@@ -166,7 +170,7 @@ export default async function PublicLayout({
             fontWeight: 200,
             fontSize: "0.65rem",
             letterSpacing: "0.45em",
-            color: "#7a5040",
+            color: "#9a6858",
             textTransform: "uppercase",
           }}
         >

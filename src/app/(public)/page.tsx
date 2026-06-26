@@ -24,7 +24,7 @@ export default async function HomePage() {
             fontWeight: 200,
             fontSize: "0.65rem",
             letterSpacing: "0.5em",
-            color: "#b08060",
+            color: "#c89878",
             textTransform: "uppercase",
             marginBottom: "0.6rem",
           }}
@@ -37,7 +37,7 @@ export default async function HomePage() {
             fontWeight: 700,
             fontSize: "1.05rem",
             letterSpacing: "0.35em",
-            color: "#f0d4bc",
+            color: "#f5e2d2",
             textTransform: "uppercase",
           }}
         >
@@ -60,7 +60,7 @@ export default async function HomePage() {
             fontWeight: 200,
             fontSize: "0.8rem",
             letterSpacing: "0.35em",
-            color: "#7a5040",
+            color: "#9a6858",
             textTransform: "uppercase",
           }}
         >
